@@ -38,6 +38,8 @@ pandas==2.2.2
 numpy==1.26.4
 ta==0.11.0
 loguru==0.7.2
+cloudscraper==1.2.71
+playwright==1.44.0
 
 # CORS & Security
 slowapi==0.1.9
