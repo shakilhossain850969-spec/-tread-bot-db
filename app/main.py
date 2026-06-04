@@ -23,11 +23,17 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from app.services.quotex_service import quotex_service
+import asyncio
+
 @app.on_event("startup")
 async def startup_event():
     # In a real app, use Alembic migrations instead of create_all
     async with db_engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+        
+    # Start Quotex connection in the background
+    asyncio.create_task(quotex_service.connect())
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
