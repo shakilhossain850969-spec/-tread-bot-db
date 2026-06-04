@@ -7,10 +7,25 @@ from sqlalchemy import select, func
 from app.database import get_db
 from app.models.signal import Signal, SignalStatus
 from app.models.user import User
-from app.schemas.signal import SignalCreate, SignalUpdate, SignalResponse, SignalListResponse
+from app.schemas.signal import SignalCreate, SignalUpdate, SignalResponse, SignalListResponse, RawSignalRequest
 from app.auth import get_current_user, get_current_admin
+from app.services.signal_engine import SignalEngine
 
 router = APIRouter(prefix="/signals", tags=["Signals"])
+engine = SignalEngine()
+
+@router.post("/analyze-raw")
+async def analyze_raw_signals(payload: RawSignalRequest):
+    """Analyze raw candle data sent from the Chrome Extension."""
+    try:
+        # Convert Pydantic models to dicts
+        raw_candles = [c.model_dump() for c in payload.candles]
+        result = await engine.generate_signal_from_raw(payload.symbol, payload.timeframe, raw_candles)
+        return result
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.get("", response_model=SignalListResponse)
