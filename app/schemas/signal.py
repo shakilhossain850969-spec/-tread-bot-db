@@ -5,6 +5,19 @@ from uuid import UUID
 from app.models.signal import SignalType, SignalStatus
 
 
+class RawCandle(BaseModel):
+    date: str
+    open: float
+    high: float
+    low: float
+    close: float
+    volume: float = 0.0
+
+class RawSignalRequest(BaseModel):
+    symbol: str
+    timeframe: str
+    candles: List[RawCandle]
+
 class SignalCreate(BaseModel):
     symbol: str
     signal_type: SignalType
