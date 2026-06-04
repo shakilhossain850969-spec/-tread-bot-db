@@ -5,7 +5,7 @@ from fastapi.exceptions import RequestValidationError
 import time
 
 from app.config import settings
-from app.routers import auth, market, signals, trades, users, admin, engine
+from app.routers import auth, market, signals, trades, users, admin, engine, quotex
 from app.database import engine as db_engine, Base
 
 app = FastAPI(
@@ -60,3 +60,4 @@ app.include_router(trades.router)
 app.include_router(users.router)
 app.include_router(admin.router)
 app.include_router(engine.router)
+app.include_router(quotex.router)
