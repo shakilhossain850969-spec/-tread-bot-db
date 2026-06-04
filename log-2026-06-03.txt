@@ -1,0 +1,376 @@
+2026-06-03 11:13:13.877 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-06-03 11:13:13.877 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-06-03 11:13:13.877 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-06-03 11:13:15.740 | INFO     | api_quotex.config:save_config:168 - Configuration saved to config.json
+2026-06-03 11:13:16.709 | WARNING  | api_quotex.login:get_ssid:379 - Cloudscraper GET /sign-in failed with status 403; switching to Playwright
+2026-06-03 11:13:18.059 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-06-03 11:13:51.628 | WARNING  | api_quotex.login:_playwright_login_and_capture:212 - Playwright: logged in but no session cookie or token found.
+2026-06-03 11:13:51.628 | INFO     | api_quotex.config:save_session:181 - Session data saved to session.json
+2026-06-03 11:13:51.628 | INFO     | api_quotex.login:_playwright_login_and_capture:214 - Playwright: session data saved successfully
+2026-06-03 11:13:52.118 | ERROR    | api_quotex.monitoring:record_error:175 - [CRITICAL] authentication: Unable to retrieve a valid SSID via Cloudscraper or Playwright.
+2026-06-03 11:22:01.920 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-06-03 11:22:01.921 | WARNING  | api_quotex.config:_load_session:141 - session.json not found, using default session data
+2026-06-03 11:22:01.921 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-06-03 11:22:02.284 | INFO     | api_quotex.config:save_config:168 - Configuration saved to config.json
+2026-06-03 11:22:03.156 | INFO     | api_quotex.login:get_ssid:324 - Submitting login form via Cloudscraper with CSRF
+2026-06-03 11:22:04.425 | INFO     | api_quotex.login:get_ssid:363 - Demo SSID captured via Cloudscraper (token)
+2026-06-03 11:22:04.425 | INFO     | api_quotex.config:save_session:181 - Session data saved to session.json
+2026-06-03 11:22:04.426 | INFO     | api_quotex.login:get_ssid:368 - Session data saved successfully
+2026-06-03 11:22:04.426 | INFO     | api_quotex.client:__init__:151 - Initialized Quotex client (demo=True, persistent=True) with enhanced monitoring
+2026-06-03 11:22:04.426 | INFO     | api_quotex.client:connect:181 - Connecting to Quotex...
+2026-06-03 11:22:04.427 | INFO     | api_quotex.client:_start_persistent_connection:286 - Starting persistent connection with automatic keep-alive...
+2026-06-03 11:22:04.427 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:22:04.427 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:22:04.532 | WARNING  | api_quotex.websocket_client:connect:196 - Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:22:04.532 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:22:04.532 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to connect to any WebSocket endpoint (Code: None)
+2026-06-03 11:22:04.532 | WARNING  | api_quotex.connection_keep_alive:connect_with_keep_alive:190 - Failed to connect to DEMO: Failed to connect to any WebSocket endpoint
+2026-06-03 11:22:04.532 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to DEMO: Failed to connect to any WebSocket endpoint
+2026-06-03 11:22:04.533 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to LIVE (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:22:04.533 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:22:04.535 | WARNING  | api_quotex.websocket_client:connect:196 - Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:22:04.535 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:22:04.535 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to connect to any WebSocket endpoint (Code: None)
+2026-06-03 11:22:04.535 | WARNING  | api_quotex.connection_keep_alive:connect_with_keep_alive:190 - Failed to connect to LIVE: Failed to connect to any WebSocket endpoint
+2026-06-03 11:22:04.535 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to LIVE: Failed to connect to any WebSocket endpoint
+2026-06-03 11:22:04.535 | ERROR    | api_quotex.client:_start_persistent_connection:311 - Failed to establish persistent connection
+2026-06-03 11:22:04.537 | INFO     | api_quotex.client:disconnect:315 - Disconnecting from Quotex...
+2026-06-03 11:22:04.537 | INFO     | api_quotex.websocket_client:disconnect:216 - Disconnecting from WebSocket
+2026-06-03 11:22:04.538 | INFO     | api_quotex.client:disconnect:351 - Disconnected successfully
+2026-06-03 11:22:38.123 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-06-03 11:22:38.123 | INFO     | api_quotex.config:_load_session:139 - Session data loaded from session.json
+2026-06-03 11:22:38.123 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-06-03 11:22:38.367 | INFO     | api_quotex.login:get_ssid:284 - Checking existing saved session...
+2026-06-03 11:22:38.402 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:22:38.414 | WARNING  | api_quotex.websocket_client:connect:196 - Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:22:38.415 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:22:38.415 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to connect to any WebSocket endpoint (Code: None)
+2026-06-03 11:22:38.415 | WARNING  | api_quotex.login:validate_ssid:127 - SSID validation failed for wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: Failed to connect to any WebSocket endpoint
+2026-06-03 11:22:38.415 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] authentication: SSID validation failed for wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: Failed to connect to any WebSocket endpoint
+2026-06-03 11:22:38.415 | ERROR    | api_quotex.login:validate_ssid:135 - SSID validation failed for all regions
+2026-06-03 11:22:38.415 | WARNING  | api_quotex.login:get_ssid:297 - Existing session is invalid or expired; removing session.json
+2026-06-03 11:22:39.141 | WARNING  | api_quotex.login:get_ssid:379 - Cloudscraper GET /sign-in failed with status 403; switching to Playwright
+2026-06-03 11:22:40.791 | INFO     | api_quotex.login:_playwright_login_and_capture:154 - Playwright: opening login page...
+2026-06-03 11:23:14.365 | INFO     | api_quotex.login:_playwright_login_and_capture:210 - Demo SSID captured via Playwright (token)
+2026-06-03 11:23:14.366 | INFO     | api_quotex.config:save_session:181 - Session data saved to session.json
+2026-06-03 11:23:14.366 | INFO     | api_quotex.login:_playwright_login_and_capture:214 - Playwright: session data saved successfully
+2026-06-03 11:23:14.935 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:23:14.939 | WARNING  | api_quotex.websocket_client:connect:196 - Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:23:14.939 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:23:14.939 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to connect to any WebSocket endpoint (Code: None)
+2026-06-03 11:23:14.939 | WARNING  | api_quotex.login:validate_ssid:127 - SSID validation failed for wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: Failed to connect to any WebSocket endpoint
+2026-06-03 11:23:14.939 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] authentication: SSID validation failed for wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: Failed to connect to any WebSocket endpoint
+2026-06-03 11:23:14.939 | ERROR    | api_quotex.login:validate_ssid:135 - SSID validation failed for all regions
+2026-06-03 11:23:14.939 | INFO     | api_quotex.client:__init__:151 - Initialized Quotex client (demo=True, persistent=True) with enhanced monitoring
+2026-06-03 11:23:14.939 | INFO     | api_quotex.client:connect:181 - Connecting to Quotex...
+2026-06-03 11:23:14.939 | INFO     | api_quotex.client:_start_persistent_connection:286 - Starting persistent connection with automatic keep-alive...
+2026-06-03 11:23:14.939 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:23:14.939 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:23:14.941 | WARNING  | api_quotex.websocket_client:connect:196 - Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:23:14.941 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:23:14.941 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to connect to any WebSocket endpoint (Code: None)
+2026-06-03 11:23:14.941 | WARNING  | api_quotex.connection_keep_alive:connect_with_keep_alive:190 - Failed to connect to DEMO: Failed to connect to any WebSocket endpoint
+2026-06-03 11:23:14.941 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to DEMO: Failed to connect to any WebSocket endpoint
+2026-06-03 11:23:14.942 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to LIVE (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:23:14.942 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:23:14.943 | WARNING  | api_quotex.websocket_client:connect:196 - Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:23:14.943 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket: BaseEventLoop.create_connection() got an unexpected keyword argument 'extra_headers'
+2026-06-03 11:23:14.943 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to connect to any WebSocket endpoint (Code: None)
+2026-06-03 11:23:14.944 | WARNING  | api_quotex.connection_keep_alive:connect_with_keep_alive:190 - Failed to connect to LIVE: Failed to connect to any WebSocket endpoint
+2026-06-03 11:23:14.944 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: Failed to connect to LIVE: Failed to connect to any WebSocket endpoint
+2026-06-03 11:23:14.944 | ERROR    | api_quotex.client:_start_persistent_connection:311 - Failed to establish persistent connection
+2026-06-03 11:24:27.559 | INFO     | api_quotex.config:_load_config:103 - Configuration loaded from config.json
+2026-06-03 11:24:27.559 | INFO     | api_quotex.config:_load_session:139 - Session data loaded from session.json
+2026-06-03 11:24:27.560 | INFO     | api_quotex.config:__init__:78 - Config instance initialized successfully
+2026-06-03 11:24:27.987 | INFO     | api_quotex.login:get_ssid:284 - Checking existing saved session...
+2026-06-03 11:24:28.007 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:24:29.162 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 11:24:29.786 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 11:24:29.787 | INFO     | api_quotex.websocket_client:disconnect:218 - Disconnecting from WebSocket
+2026-06-03 11:24:30.327 | INFO     | api_quotex.login:validate_ssid:115 - SSID validated successfully using wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:24:30.327 | INFO     | api_quotex.login:get_ssid:294 - Existing session is valid.
+2026-06-03 11:24:30.327 | INFO     | api_quotex.client:__init__:151 - Initialized Quotex client (demo=True, persistent=True) with enhanced monitoring
+2026-06-03 11:24:30.327 | INFO     | api_quotex.client:connect:181 - Connecting to Quotex...
+2026-06-03 11:24:30.327 | INFO     | api_quotex.client:_start_persistent_connection:286 - Starting persistent connection with automatic keep-alive...
+2026-06-03 11:24:30.328 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:24:30.329 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:24:31.402 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 11:24:32.052 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 11:24:32.053 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 11:24:32.053 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 11:24:32.053 | ERROR    | api_quotex.client:send_message:435 - Failed to send message: WebSocket is not connected
+2026-06-03 11:24:32.053 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: WebSocket is not connected
+2026-06-03 11:24:32.053 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:174 - Connected to DEMO
+2026-06-03 11:24:32.053 | INFO     | api_quotex.connection_keep_alive:_start_keep_alive_tasks:201 - Starting keep-alive tasks
+2026-06-03 11:24:32.053 | INFO     | api_quotex.client:_on_keep_alive_connected:1517 - Keep-alive connection established
+2026-06-03 11:24:32.054 | INFO     | api_quotex.client:_start_persistent_connection:308 - Persistent connection established successfully
+2026-06-03 11:24:32.054 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:310 - Starting reconnection monitor...
+2026-06-03 11:24:32.054 | INFO     | api_quotex.connection_keep_alive:_health_monitor_loop:236 - Starting health monitor...
+2026-06-03 11:24:32.054 | INFO     | api_quotex.connection_keep_alive:_assets_request_loop:282 - Starting assets request loop...
+2026-06-03 11:24:32.197 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:24:32.197 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 11:25:44.975 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 11:26:21.263 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:27:22.260 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:28:19.183 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:30:20.478 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:32:18.868 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:34:20.169 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:36:20.374 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:36:21.645 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:38:21.446 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:40:20.687 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:42:19.500 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:44:19.991 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:45:21.125 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:45:21.920 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:46:18.349 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:48:18.951 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:50:21.408 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:52:21.165 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:52:28.193 | INFO     | api_quotex.websocket_client:receive_messages:344 - WebSocket connection closed normally (code 1005 or OK)
+2026-06-03 11:52:28.195 | INFO     | api_quotex.websocket_client:_handle_disconnect:974 - Handling WebSocket disconnection
+2026-06-03 11:52:28.196 | INFO     | api_quotex.websocket_client:_handle_disconnect:992 - Attempting reconnection 1/5
+2026-06-03 11:52:30.014 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Attempting reconnection 1/5
+2026-06-03 11:52:32.411 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 11:52:32.413 | WARNING  | api_quotex.connection_keep_alive:_assets_request_loop:296 - Assets request failed: WebSocket is not connected
+2026-06-03 11:52:32.413 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] data: Assets request failed: WebSocket is not connected
+2026-06-03 11:52:32.519 | INFO     | api_quotex.login:get_ssid:284 - Checking existing saved session...
+2026-06-03 11:52:32.670 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:52:32.746 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:314 - Connection lost, reconnecting...
+2026-06-03 11:52:32.747 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:52:32.748 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:52:33.967 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 11:52:33.968 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 11:52:34.661 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 11:52:34.662 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 11:52:34.664 | ERROR    | api_quotex.client:send_message:435 - Failed to send message: Not connected
+2026-06-03 11:52:34.665 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: Not connected
+2026-06-03 11:52:34.665 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:174 - Connected to DEMO
+2026-06-03 11:52:34.665 | INFO     | api_quotex.connection_keep_alive:_start_keep_alive_tasks:201 - Starting keep-alive tasks
+2026-06-03 11:52:34.666 | INFO     | api_quotex.client:_on_keep_alive_connected:1517 - Keep-alive connection established
+2026-06-03 11:52:34.666 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:320 - Reconnection successful
+2026-06-03 11:52:34.666 | INFO     | api_quotex.client:_on_keep_alive_reconnected:1523 - Keep-alive reconnected
+2026-06-03 11:52:34.666 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:310 - Starting reconnection monitor...
+2026-06-03 11:52:34.667 | INFO     | api_quotex.connection_keep_alive:_health_monitor_loop:236 - Starting health monitor...
+2026-06-03 11:52:34.667 | INFO     | api_quotex.connection_keep_alive:_assets_request_loop:282 - Starting assets request loop...
+2026-06-03 11:52:34.667 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 11:52:34.667 | INFO     | api_quotex.websocket_client:disconnect:218 - Disconnecting from WebSocket
+2026-06-03 11:52:34.949 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:52:34.950 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 11:52:35.246 | INFO     | api_quotex.login:validate_ssid:115 - SSID validated successfully using wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:52:35.246 | INFO     | api_quotex.login:get_ssid:294 - Existing session is valid.
+2026-06-03 11:52:35.249 | INFO     | api_quotex.client:__init__:151 - Initialized Quotex client (demo=True, persistent=True) with enhanced monitoring
+2026-06-03 11:52:35.249 | INFO     | api_quotex.client:connect:181 - Connecting to Quotex...
+2026-06-03 11:52:35.250 | INFO     | api_quotex.client:_start_persistent_connection:286 - Starting persistent connection with automatic keep-alive...
+2026-06-03 11:52:35.250 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 11:52:35.251 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 11:52:36.217 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 11:52:36.910 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 11:52:36.910 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 11:52:36.910 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 11:52:36.911 | ERROR    | api_quotex.client:send_message:435 - Failed to send message: WebSocket is not connected
+2026-06-03 11:52:36.911 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: WebSocket is not connected
+2026-06-03 11:52:36.911 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:174 - Connected to DEMO
+2026-06-03 11:52:36.911 | INFO     | api_quotex.connection_keep_alive:_start_keep_alive_tasks:201 - Starting keep-alive tasks
+2026-06-03 11:52:36.911 | INFO     | api_quotex.client:_on_keep_alive_connected:1517 - Keep-alive connection established
+2026-06-03 11:52:36.911 | INFO     | api_quotex.client:_start_persistent_connection:308 - Persistent connection established successfully
+2026-06-03 11:52:36.918 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:310 - Starting reconnection monitor...
+2026-06-03 11:52:36.918 | INFO     | api_quotex.connection_keep_alive:_health_monitor_loop:236 - Starting health monitor...
+2026-06-03 11:52:36.918 | INFO     | api_quotex.connection_keep_alive:_assets_request_loop:282 - Starting assets request loop...
+2026-06-03 11:52:37.119 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:52:37.120 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 11:54:22.742 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:54:22.745 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:54:24.335 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:54:24.337 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:55:23.956 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:55:23.961 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:56:18.730 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:56:18.733 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:58:18.821 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:58:18.890 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:59:18.987 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 11:59:19.070 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:00:21.341 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:00:21.363 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:00:22.887 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:00:22.890 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:02:17.261 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:02:17.279 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:03:19.994 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:03:20.007 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:04:18.012 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:04:18.017 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:06:17.879 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:06:17.896 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:08:18.089 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:08:18.160 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:09:13.761 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:09:13.764 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:09:19.358 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:09:19.360 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:10:20.584 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:10:20.586 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:11:29.858 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:11:29.859 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:12:18.713 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:12:18.716 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:14:08.587 | INFO     | api_quotex.websocket_client:receive_messages:344 - WebSocket connection closed normally (code 1005 or OK)
+2026-06-03 12:14:08.588 | INFO     | api_quotex.websocket_client:_handle_disconnect:974 - Handling WebSocket disconnection
+2026-06-03 12:14:08.588 | INFO     | api_quotex.websocket_client:_handle_disconnect:992 - Attempting reconnection 1/5
+2026-06-03 12:14:10.402 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Attempting reconnection 1/5
+2026-06-03 12:14:15.215 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 12:14:15.216 | WARNING  | api_quotex.connection_keep_alive:_ping_loop:225 - Ping failed: WebSocket is not connected
+2026-06-03 12:14:15.216 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Ping failed: WebSocket is not connected
+2026-06-03 12:14:17.555 | INFO     | api_quotex.websocket_client:receive_messages:344 - WebSocket connection closed normally (code 1005 or OK)
+2026-06-03 12:14:17.555 | INFO     | api_quotex.websocket_client:_handle_disconnect:974 - Handling WebSocket disconnection
+2026-06-03 12:14:17.555 | INFO     | api_quotex.websocket_client:_handle_disconnect:992 - Attempting reconnection 1/5
+2026-06-03 12:14:19.369 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Attempting reconnection 1/5
+2026-06-03 12:14:35.095 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:314 - Connection lost, reconnecting...
+2026-06-03 12:14:35.095 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 12:14:35.096 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 12:14:36.418 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 12:14:37.127 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 12:14:37.128 | WARNING  | api_quotex.connection_keep_alive:_assets_request_loop:296 - Assets request failed: WebSocket is not connected
+2026-06-03 12:14:37.128 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] data: Assets request failed: WebSocket is not connected
+2026-06-03 12:14:37.141 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 12:14:37.141 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 12:14:37.141 | ERROR    | api_quotex.client:send_message:435 - Failed to send message: Not connected
+2026-06-03 12:14:37.141 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: Not connected
+2026-06-03 12:14:37.142 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:174 - Connected to DEMO
+2026-06-03 12:14:37.142 | INFO     | api_quotex.connection_keep_alive:_start_keep_alive_tasks:201 - Starting keep-alive tasks
+2026-06-03 12:14:37.142 | INFO     | api_quotex.client:_on_keep_alive_connected:1517 - Keep-alive connection established
+2026-06-03 12:14:37.142 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:320 - Reconnection successful
+2026-06-03 12:14:37.142 | INFO     | api_quotex.client:_on_keep_alive_reconnected:1523 - Keep-alive reconnected
+2026-06-03 12:14:37.143 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:310 - Starting reconnection monitor...
+2026-06-03 12:14:37.143 | INFO     | api_quotex.connection_keep_alive:_health_monitor_loop:236 - Starting health monitor...
+2026-06-03 12:14:37.143 | INFO     | api_quotex.connection_keep_alive:_assets_request_loop:282 - Starting assets request loop...
+2026-06-03 12:14:37.345 | INFO     | api_quotex.login:get_ssid:284 - Checking existing saved session...
+2026-06-03 12:14:37.347 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 12:14:37.405 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:314 - Connection lost, reconnecting...
+2026-06-03 12:14:37.406 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 12:14:37.406 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 12:14:37.448 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:14:37.448 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 12:14:38.296 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 12:14:38.298 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 12:14:38.903 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 12:14:38.903 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 12:14:38.903 | ERROR    | api_quotex.client:send_message:435 - Failed to send message: Not connected
+2026-06-03 12:14:38.903 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: Not connected
+2026-06-03 12:14:38.903 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:174 - Connected to DEMO
+2026-06-03 12:14:38.903 | INFO     | api_quotex.connection_keep_alive:_start_keep_alive_tasks:201 - Starting keep-alive tasks
+2026-06-03 12:14:38.904 | INFO     | api_quotex.client:_on_keep_alive_connected:1517 - Keep-alive connection established
+2026-06-03 12:14:38.904 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:320 - Reconnection successful
+2026-06-03 12:14:38.904 | INFO     | api_quotex.client:_on_keep_alive_reconnected:1523 - Keep-alive reconnected
+2026-06-03 12:14:38.904 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:310 - Starting reconnection monitor...
+2026-06-03 12:14:38.904 | INFO     | api_quotex.connection_keep_alive:_health_monitor_loop:236 - Starting health monitor...
+2026-06-03 12:14:38.904 | INFO     | api_quotex.connection_keep_alive:_assets_request_loop:282 - Starting assets request loop...
+2026-06-03 12:14:38.905 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 12:14:38.905 | INFO     | api_quotex.websocket_client:disconnect:218 - Disconnecting from WebSocket
+2026-06-03 12:14:39.204 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:14:39.204 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 12:14:39.483 | INFO     | api_quotex.login:validate_ssid:115 - SSID validated successfully using wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 12:14:39.483 | INFO     | api_quotex.login:get_ssid:294 - Existing session is valid.
+2026-06-03 12:14:39.484 | INFO     | api_quotex.client:__init__:151 - Initialized Quotex client (demo=True, persistent=True) with enhanced monitoring
+2026-06-03 12:14:39.484 | INFO     | api_quotex.client:connect:181 - Connecting to Quotex...
+2026-06-03 12:14:39.484 | INFO     | api_quotex.client:_start_persistent_connection:286 - Starting persistent connection with automatic keep-alive...
+2026-06-03 12:14:39.484 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:168 - Trying to connect to DEMO (wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket)
+2026-06-03 12:14:39.484 | INFO     | api_quotex.websocket_client:connect:154 - Attempting to connect to wss://ws2.qxbroker.com/socket.io/?EIO=3&transport=websocket
+2026-06-03 12:14:40.233 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 12:14:40.239 | ERROR    | api_quotex.client:get_candles:1004 - Error fetching candles for AUDJPY: WebSocket is not connected
+2026-06-03 12:14:41.001 | INFO     | api_quotex.websocket_client:connect:188 - Connected to LIVE region successfully
+2026-06-03 12:14:41.572 | INFO     | api_quotex.websocket_client:_send_handshake:453 - Authentication successful (via instruments/list header)
+2026-06-03 12:14:41.572 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 12:14:41.572 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: WebSocket is not connected (Code: None)
+2026-06-03 12:14:41.572 | ERROR    | api_quotex.client:send_message:435 - Failed to send message: WebSocket is not connected
+2026-06-03 12:14:41.572 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: WebSocket is not connected
+2026-06-03 12:14:41.572 | INFO     | api_quotex.connection_keep_alive:connect_with_keep_alive:174 - Connected to DEMO
+2026-06-03 12:14:41.572 | INFO     | api_quotex.connection_keep_alive:_start_keep_alive_tasks:201 - Starting keep-alive tasks
+2026-06-03 12:14:41.573 | INFO     | api_quotex.client:_on_keep_alive_connected:1517 - Keep-alive connection established
+2026-06-03 12:14:41.573 | INFO     | api_quotex.client:_start_persistent_connection:308 - Persistent connection established successfully
+2026-06-03 12:14:41.573 | INFO     | api_quotex.connection_keep_alive:_reconnection_monitor:310 - Starting reconnection monitor...
+2026-06-03 12:14:41.573 | INFO     | api_quotex.connection_keep_alive:_health_monitor_loop:236 - Starting health monitor...
+2026-06-03 12:14:41.573 | INFO     | api_quotex.connection_keep_alive:_assets_request_loop:282 - Starting assets request loop...
+2026-06-03 12:14:41.699 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:14:41.699 | INFO     | api_quotex.client:_on_authenticated:1148 - Authenticated with server
+2026-06-03 12:16:17.711 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:16:17.780 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:16:17.813 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:18:18.321 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:18:18.507 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:18:18.573 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:18:20.486 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:18:20.529 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:18:20.540 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:20:18.570 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:20:18.684 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:20:18.718 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:22:17.435 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:22:17.524 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:22:17.534 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:23:26.745 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:23:26.745 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:23:26.751 | INFO     | api_quotex.client:_on_balance_data:1234 - Balance updated: uid=88812049, balance=10000.0
+2026-06-03 12:24:16.647 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:24:16.650 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 12:24:16.654 | INFO     | api_quotex.client:_on_assets_updated:886 - Stored 92 assets from instruments/list
+2026-06-03 13:33:41.593 | WARNING  | api_quotex.connection_keep_alive:_health_monitor_loop:247 - No ping response, connection may be dead
+2026-06-03 13:33:41.594 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: No ping response, connection may be dead
+2026-06-03 13:33:41.595 | WARNING  | api_quotex.connection_keep_alive:_health_monitor_loop:247 - No ping response, connection may be dead
+2026-06-03 13:33:41.595 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: No ping response, connection may be dead
+2026-06-03 13:33:41.595 | WARNING  | api_quotex.websocket_client:receive_messages:333 - Message receive timeout
+2026-06-03 13:33:41.595 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Timeout waiting for WebSocket message
+2026-06-03 13:33:41.596 | WARNING  | api_quotex.connection_keep_alive:_health_monitor_loop:247 - No ping response, connection may be dead
+2026-06-03 13:33:41.596 | ERROR    | api_quotex.monitoring:record_error:175 - [HIGH] connection: No ping response, connection may be dead
+2026-06-03 13:33:41.596 | WARNING  | api_quotex.websocket_client:receive_messages:333 - Message receive timeout
+2026-06-03 13:33:41.596 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Timeout waiting for WebSocket message
+2026-06-03 13:33:41.596 | WARNING  | api_quotex.websocket_client:receive_messages:333 - Message receive timeout
+2026-06-03 13:33:41.596 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Timeout waiting for WebSocket message
+2026-06-03 13:33:41.642 | ERROR    | api_quotex.websocket_client:send_message:284 - Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.642 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.643 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to send message: no close frame received or sent (Code: None)
+2026-06-03 13:33:41.643 | WARNING  | api_quotex.connection_keep_alive:_assets_request_loop:296 - Assets request failed: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.643 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] data: Assets request failed: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.644 | ERROR    | api_quotex.websocket_client:send_message:284 - Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.644 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.644 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to send message: no close frame received or sent (Code: None)
+2026-06-03 13:33:41.644 | ERROR    | api_quotex.websocket_client:_ping_loop:538 - Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.644 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.645 | ERROR    | api_quotex.websocket_client:send_message:284 - Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.645 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.645 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to send message: no close frame received or sent (Code: None)
+2026-06-03 13:33:41.645 | ERROR    | api_quotex.websocket_client:_ping_loop:538 - Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.645 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:receive_messages:344 - WebSocket connection closed normally (code 1005 or OK)
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:_handle_disconnect:974 - Handling WebSocket disconnection
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:_handle_disconnect:992 - Attempting reconnection 1/5
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:receive_messages:344 - WebSocket connection closed normally (code 1005 or OK)
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:_handle_disconnect:974 - Handling WebSocket disconnection
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:_handle_disconnect:992 - Attempting reconnection 1/5
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:receive_messages:344 - WebSocket connection closed normally (code 1005 or OK)
+2026-06-03 13:33:41.646 | INFO     | api_quotex.websocket_client:_handle_disconnect:974 - Handling WebSocket disconnection
+2026-06-03 13:33:41.647 | INFO     | api_quotex.websocket_client:_handle_disconnect:992 - Attempting reconnection 1/5
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.websocket_client:send_message:284 - Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to send message: no close frame received or sent (Code: None)
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.websocket_client:_ping_loop:538 - Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.websocket_client:send_message:284 - Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.711 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to send message: no close frame received or sent (Code: None)
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.websocket_client:_ping_loop:538 - Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.websocket_client:send_message:284 - Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.exceptions:__init__:14 - QuotexError: Failed to send message: no close frame received or sent (Code: None)
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.websocket_client:_ping_loop:538 - Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.712 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Ping loop error: Failed to send message: no close frame received or sent
+2026-06-03 13:33:41.758 | ERROR    | api_quotex.websocket_client:_delayed_flush:307 - Failed to flush batched messages: no close frame received or sent
+2026-06-03 13:33:41.758 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to flush batched messages: no close frame received or sent
+2026-06-03 13:33:41.758 | ERROR    | api_quotex.websocket_client:_delayed_flush:307 - Failed to flush batched messages: no close frame received or sent
+2026-06-03 13:33:41.758 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Failed to flush batched messages: no close frame received or sent
+2026-06-03 13:33:43.452 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Attempting reconnection 1/5
+2026-06-03 13:33:43.452 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Attempting reconnection 1/5
+2026-06-03 13:33:43.452 | ERROR    | api_quotex.monitoring:record_error:175 - [MEDIUM] connection: Attempting reconnection 1/5
