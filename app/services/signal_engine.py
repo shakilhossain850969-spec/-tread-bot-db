@@ -23,6 +23,27 @@ class SignalEngine:
         df = await DataFetcher.get_ohlcv(symbol, timeframe)
         if df.empty or len(df) < 50:
             return self._empty_signal(symbol, timeframe)
+            
+        return await self._process_dataframe(df, symbol, timeframe)
+        
+    async def generate_signal_from_raw(self, symbol: str, timeframe: str, raw_candles: list) -> dict:
+        """Process raw candles directly from Chrome Extension."""
+        if not raw_candles or len(raw_candles) < 50:
+            return self._empty_signal(symbol, timeframe)
+            
+        df = pd.DataFrame(raw_candles)
+        if 'date' in df.columns:
+            df['date'] = pd.to_datetime(df['date'])
+            df.set_index('date', inplace=True)
+            
+        # Ensure correct types
+        for col in ['open', 'high', 'low', 'close', 'volume']:
+            if col in df.columns:
+                df[col] = df[col].astype(float)
+                
+        return await self._process_dataframe(df, symbol, timeframe)
+
+    async def _process_dataframe(self, df: pd.DataFrame, symbol: str, timeframe: str) -> dict:
 
         # 1. Compute Indicators & Patterns
         df = IndicatorEngine.add_all_indicators(df)
